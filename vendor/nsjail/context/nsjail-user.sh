@@ -20,6 +20,8 @@ export CPU_SHARES_MS=${CPU_SHARES_MS:-50} # 50 ms per second of cpu per competit
 TMP_ENABLED=${TMP_ENABLED:-0}
 TMP_SIZE=${TMP_SIZE:-5000000}
 
+echo "$FLAG" > /flag.txt
+
 if [ $TMP_ENABLED -eq 1 ]; then
 	export TMP_PARAMS=$(cat <<-END
 , {
@@ -45,6 +47,6 @@ fi
 if [ "$MODE" == "LISTEN_INJECT_FLAG" ]; then
 	socat tcp-listen:$PORT,reuseaddr,fork "exec:/docker-init/inject-flag.sh"
 else
-	nsjail --config <(echo "$CONFIG" | envsubst) --env FLAG
+	nsjail --config <(echo "$CONFIG" | envsubst)
 fi
 
