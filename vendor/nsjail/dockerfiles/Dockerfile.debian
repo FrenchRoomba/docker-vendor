@@ -52,5 +52,4 @@ CMD ["/docker-init/nsjail-launcher.sh"]
 COPY nsjail.cfg /home/ctf
 COPY chal /home/ctf/chal/
 COPY kctf /home/ctf/kctf/
-
-
+RUN mkdir /home/ctf/nix
