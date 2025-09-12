@@ -2,7 +2,7 @@ ARG UBUNTU_VERSION
 ARG LIBPROTOBUF_VERSION
 
 
-FROM ghcr.io/downunderctf/docker-vendor/bin-builder:ubuntu-$UBUNTU_VERSION AS base
+FROM ghcr.io/frenchroomba/docker-vendor/bin-builder:ubuntu-$UBUNTU_VERSION AS base
 
 FROM base as build
 ARG LIBPROTOBUF_VERSION

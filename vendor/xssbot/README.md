@@ -11,7 +11,7 @@ Include the following in your `docker-compose.yml`. By default Marvin listens on
 ```yaml
 services:
   xssbot:
-    image: ghcr.io/downunderctf/docker-vendor/xssbot:chrome
+    image: ghcr.io/frenchroomba/docker-vendor/xssbot:chrome
     privileged: true
     # Useful for development
     environment:
@@ -71,7 +71,7 @@ You then mount this file into the container from the file system
 ```yaml
 services:
   xssbot:
-    image: ghcr.io/downunderctf/docker-vendor/xssbot:chrome
+    image: ghcr.io/frenchroomba/docker-vendor/xssbot:chrome
     volumes:
       - ./cookiejar:/var/marvin/auth/cookiejar
 ```
@@ -85,7 +85,7 @@ services:
   mychal:
     image: ...
   xssbot:
-    image: ghcr.io/downunderctf/docker-vendor/xssbot:chrome
+    image: ghcr.io/frenchroomba/docker-vendor/xssbot:chrome
     environment:
       - OUTBOUND_AUTH_METHOD: http-get
       - OUTBOUND_AUTH_HTTP_GET_URL: http://external.chal.address/admin?token=abcd

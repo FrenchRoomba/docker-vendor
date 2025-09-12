@@ -6,7 +6,7 @@ building blockchain challenges for deployment.
 ## Example usage
 
 ```dockerfile
-FROM ghcr.io/downunderctf/docker-vendor/ethcompiler:foundry as build
+FROM ghcr.io/frenchroomba/docker-vendor/ethcompiler:foundry as build
 
 COPY contracts/ src/
 COPY foundry.toml foundry.toml

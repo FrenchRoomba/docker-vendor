@@ -2,7 +2,7 @@ ARG DEBIAN_VERSION
 ARG LIBPROTOBUF_VERSION
 
 
-FROM ghcr.io/downunderctf/docker-vendor/bin-builder:debian-$DEBIAN_VERSION AS base
+FROM ghcr.io/frenchroomba/docker-vendor/bin-builder:debian-$DEBIAN_VERSION AS base
 
 FROM base as build
 ARG LIBPROTOBUF_VERSION
